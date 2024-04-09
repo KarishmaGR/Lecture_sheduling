@@ -6,7 +6,7 @@ const app = Express();
 
 app.use(
   cors({
-    origin: "https://lecture-sheduling-backend.onrender.com",
+    origin: "*",
     credentials: true,
   })
 );
