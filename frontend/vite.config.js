@@ -10,7 +10,6 @@ export default defineConfig({
       "/api": {
         target: "https://lecture-sheduling-backend.onrender.com/api/v1",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
