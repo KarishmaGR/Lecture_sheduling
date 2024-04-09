@@ -8,6 +8,7 @@ app.use(
   cors({
     origin: ["http://localhost:5173", "*"],
     credentials: true,
+    methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
   })
 );
 app.use(Express.json());
