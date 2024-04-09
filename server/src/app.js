@@ -6,7 +6,10 @@ import dotenv from "dotenv";
 const app = Express();
 
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173/");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://lecture-sheduling-beta.vercel.app/"
+  );
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS,CONNECT,TRACE"
@@ -25,8 +28,8 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "*"],
-    credentials: false,
+    origin: ["https://lecture-sheduling-beta.vercel.app/"],
+    credentials: true,
     methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
   })
 );
