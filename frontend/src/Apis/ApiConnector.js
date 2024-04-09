@@ -2,10 +2,10 @@ import axios from "axios";
 
 axios.defaults.withCredentials = true;
 const axiosInstance = axios.create({
-  baseURL: "https://lecture-sheduling-backend.onrender.com/api/v1", // Adjust the base URL as needed
+  baseURL: "https://lecture-sheduling-backend.onrender.com/api/v1",
   headers: {
     "Content-Type": "application/json",
-    "Access-Control-Allow-Origin": "http://localhost:5173", // Specify the exact origin
+    "Access-Control-Allow-Origin": "http://localhost:5173",
   },
 });
 
