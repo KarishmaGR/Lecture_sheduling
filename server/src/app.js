@@ -8,7 +8,7 @@ const app = Express();
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://lecture-sheduling-beta.vercel.app/"
+    "https://lecture-sheduling-beta.vercel.app"
   );
   res.setHeader(
     "Access-Control-Allow-Methods",
@@ -28,9 +28,10 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    origin: ["https://lecture-sheduling-beta.vercel.app/"],
+    origin: ["https://lecture-sheduling-beta.vercel.app"],
     credentials: true,
     methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
+    optionsSuccessStatus: 200,
   })
 );
 
