@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 app.use(
   cors({
     origin: ["http://localhost:5173", "*"],
-    credentials: true,
+    credentials: false,
     methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
   })
 );
