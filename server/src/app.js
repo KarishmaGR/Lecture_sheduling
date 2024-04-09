@@ -1,9 +1,19 @@
 import Express, { Router } from "express";
-const router = Router();
+
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 const app = Express();
+
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173"); // Set the allowed origin
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  ); // Set the allowed HTTP methods
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization"); // Set the allowed headers
+  next();
+});
 
 app.use(
   cors({
@@ -30,17 +40,6 @@ app.use("/api/v1/instructor", InstructorRouter);
 
 dotenv.config({
   path: "./.env",
-});
-
-router.get("/", (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader("Access-Control-Max-Age", "1800");
-  res.setHeader("Access-Control-Allow-Headers", "content-type");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "PUT, POST, GET, DELETE, PATCH, OPTIONS"
-  );
 });
 
 export { app };
