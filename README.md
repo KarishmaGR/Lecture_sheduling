@@ -1,4 +1,4 @@
-# Project Name
+# Lecture Sheduler
 
 ## Frontend Setup
 
