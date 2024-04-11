@@ -1,23 +1,8 @@
 import Express, { Router } from "express";
 
-import cors from "cors";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 const app = Express();
-
-app.use((req, res, next) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://lecture-sheduling-beta.vercel.app"
-  );
-
-  res.setHeader("Access-Control-Allow-Credentials", true);
-
-  //  Firefox caps this at 24 hours (86400 seconds). Chromium (starting in v76) caps at 2 hours (7200 seconds). The default value is 5 seconds.
-
-  next();
-});
-
 app.use(
   cors({
     origin: ["https://lecture-sheduling-beta.vercel.app"],
@@ -26,6 +11,16 @@ app.use(
     optionsSuccessStatus: 200,
   })
 );
+// app.use((req, res, next) => {
+//   res.setHeader(
+//     "Access-Control-Allow-Origin",
+//     "https://lecture-sheduling-beta.vercel.app"
+//   );
+
+//   res.setHeader("Access-Control-Allow-Credentials", true);
+
+//   next();
+// });
 
 app.use(Express.json());
 app.use(cookieParser());
