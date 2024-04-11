@@ -4,9 +4,11 @@ import Footer from "./Components/Common/Footer/Footer.jsx";
 const App = () => {
   return (
     <>
-      <Header />
-      <Outlet />
-      <Footer />
+      <div className=" flex flex-col justify-around items-center h-screen  bg-slate-900 overflow-x-hidden">
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
     </>
   );
 };

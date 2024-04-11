@@ -23,11 +23,11 @@ const Instructor = () => {
   return (
     <>
       <section className="w-[100vw] h-[100vh] flex justify-center items-center bg-gray-900 ">
-        <div className=" w-[60vw] overflow-x-auto">
+        <div className=" w-[60vw]  rounded-2xl overflow-x-auto">
           <p className=" text-xl  text-white mb-7">Assigned Lectures</p>
-          <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <table className="w-full rounded-2xl text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-              <tr>
+              <tr className=" rounded-2xl">
                 <th scope="col" className="px-6 py-3">
                   Lecture Title
                 </th>

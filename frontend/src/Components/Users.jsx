@@ -43,8 +43,8 @@ const Users = () => {
 
   return (
     <>
-      <section className="w-[100vw] h-[100vh] flex justify-center items-center bg-gray-900 ">
-        <div className="relative overflow-x-auto">
+      <section className="w-[100vw]  my-40 min-h-max  flex justify-center items-center bg-gray-900 ">
+        <div className="relative  rounded-xl overflow-x-auto">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
@@ -55,7 +55,7 @@ const Users = () => {
                   User Email
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Assign Course
+                  Assign Lecture
                 </th>
               </tr>
             </thead>
@@ -73,7 +73,10 @@ const Users = () => {
                       {user.username}
                     </th>
                     <td className="px-6 py-4">{user.email}</td>
-                    <td className="px-6 py-4">
+                    <td className="px-6 py-4 flex flex-col gap-3">
+                      <p className="text-[1rem]">
+                        Select a course to assign lecture
+                      </p>
                       <select
                         onChange={(e) =>
                           handleCourseChange(user._id, e.target.value)
@@ -89,14 +92,18 @@ const Users = () => {
                         ))}
                       </select>
                       {selectedCourses[user._id] && (
-                        <Link
-                          to={`/assignlecture/${selectedCourses[user._id]}/${
-                            user._id
-                          }`}
-                          className="px-6 py-4"
-                        >
-                          Assign Course
-                        </Link>
+                        <>
+                          <div>
+                            <Link
+                              to={`/assignlecture/${
+                                selectedCourses[user._id]
+                              }/${user._id}`}
+                              className="bg-white border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            >
+                              Assign Course
+                            </Link>
+                          </div>
+                        </>
                       )}
                     </td>
                   </tr>

@@ -35,7 +35,7 @@ const AssignLecture = () => {
     <>
       <section className="w-[100vw] h-[100vh] flex justify-center items-center bg-gray-900">
         <div className=" w-[50vw]  px-6 py-8   rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 dark:border-gray-700 ">
-          <form onSubmit={handleSubmit} className=" ">
+          <form onSubmit={handleSubmit} className=" py-6 px-6 ">
             <div>
               <label
                 htmlFor="title"
@@ -70,7 +70,7 @@ const AssignLecture = () => {
             </div>
             <button
               type="submit"
-              className="w-full mt-6 text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+              className="w-full mt-6 border-blue-900 bg-blue-700 text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
             >
               Assign Lecture
             </button>
