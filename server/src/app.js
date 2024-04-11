@@ -31,9 +31,9 @@ import UserRouter from "./Routes/user.route.js";
 import CourseRouter from "./Routes/course.route.js";
 import LectureRouter from "./Routes/lecture.route.js";
 import InstructorRouter from "./Routes/instructor.route.js";
-app.use("/", (req, res) => {
-  res.send("Server is running");
-});
+// app.use("/", (req, res) => {
+//   res.send("Server is running");
+// });
 app.use("/api/v1/user", UserRouter);
 app.use("/api/v1/lecture", LectureRouter);
 app.use("/api/v1/course", CourseRouter);
