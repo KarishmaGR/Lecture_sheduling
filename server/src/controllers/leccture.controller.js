@@ -48,7 +48,7 @@ const createLecture = asyncHandler(async (req, res) => {
   }
   return res
     .status(200)
-    .json(new ApiResponse(200, "Lecture Created Successfully", newlecture));
+    .json(new ApiResponse(200, "Lecture Assigned Successfully", newlecture));
 });
 
 export { createLecture };
