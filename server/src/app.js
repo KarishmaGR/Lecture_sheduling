@@ -39,8 +39,4 @@ app.use("/api/v1/lecture", LectureRouter);
 app.use("/api/v1/course", CourseRouter);
 app.use("/api/v1/instructor", InstructorRouter);
 
-dotenv.config({
-  path: "./.env",
-});
-
 export { app };
