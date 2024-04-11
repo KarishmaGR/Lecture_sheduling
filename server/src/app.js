@@ -5,10 +5,8 @@ import cors from "cors";
 const app = Express();
 app.use(
   cors({
-    origin: ["https://lecture-sheduling-beta.vercel.app"],
+    origin: "https://lecture-sheduling-beta.vercel.app",
     credentials: true,
-    methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-    optionsSuccessStatus: 200,
   })
 );
 // app.use((req, res, next) => {
