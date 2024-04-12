@@ -69,6 +69,7 @@ export const login = (email, password, navigate) => {
         navigate("/dashboard/instructor");
       }
     } catch (error) {
+      console.log("api", USER_APIS.LOGIN_API);
       console.log("Error in APi Calling", error);
     }
     dispatch(setLoading(false));
