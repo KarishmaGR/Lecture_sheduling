@@ -15,6 +15,14 @@ app.use(
   })
 );
 
+app.use((req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://lecture-sheduling-beta.vercel.app"
+  );
+  next();
+});
+
 app.use(Express.json());
 app.use(cookieParser());
 app.use(Express.urlencoded({ extended: false }));
