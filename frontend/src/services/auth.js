@@ -45,6 +45,8 @@ export const login = (email, password, navigate) => {
         password,
       });
 
+      console.log("api", USER_APIS.LOGIN_API);
+
       if (!response) {
         throw new Error("ERROR IN LOGIN API.....", response.error);
       }
