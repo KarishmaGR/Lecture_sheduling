@@ -5,11 +5,9 @@ import cors from "cors";
 const app = Express();
 app.use(
   cors({
-    origin: [
-      "https://lecture-sheduling-beta.vercel.app",
+    origin:
       "https://lecture-sheduling-gpiyft5c7-karishma-yadavs-projects.vercel.app",
-      "https://lecture-sheduling-git-main-karishma-yadavs-projects.vercel.app",
-    ],
+
     //origin: "http://localhost:5173",
     credentials: true,
   })
@@ -18,7 +16,7 @@ app.use(
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://lecture-sheduling-beta.vercel.app"
+    "https://lecture-sheduling-gpiyft5c7-karishma-yadavs-projects.vercel.app"
   );
   next();
 });
