@@ -16,10 +16,12 @@ app.use(
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://lecture-sheduling-gpiyft5c7-karishma-yadavs-projects.vercel.app"
+    "https://lecture-sheduling-kwdnhnpjr-karishma-yadavs-projects.vercel.app/"
   );
   next();
 });
+
+//  "https://lecture-sheduling-gpiyft5c7-karishma-yadavs-projects.vercel.app";
 
 app.use(Express.json());
 app.use(cookieParser());
