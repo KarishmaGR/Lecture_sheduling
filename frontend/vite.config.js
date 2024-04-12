@@ -11,7 +11,7 @@ export default defineConfig(({ mode }) => {
     server: {
       proxy: {
         // Proxying requests starting with `/api` to the backend
-        "/api": {
+        "/server": {
           target: env.VITE_APP_BASE_URL,
           changeOrigin: true,
           secure: fasle,

@@ -1,4 +1,4 @@
-const BASE_URL = "/api";
+const BASE_URL = "/server/api/v1";
 
 export const USER_APIS = {
   SIGN_UP_API: BASE_URL + "/user/createuser",
