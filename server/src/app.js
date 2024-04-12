@@ -6,7 +6,7 @@ const app = Express();
 app.use(
   cors({
     origin:
-      "https://lecture-sheduling-gpiyft5c7-karishma-yadavs-projects.vercel.app",
+      "https://lecture-sheduling-kwdnhnpjr-karishma-yadavs-projects.vercel.app",
 
     //origin: "http://localhost:5173",
     credentials: true,
