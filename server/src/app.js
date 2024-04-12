@@ -3,16 +3,6 @@ import cookieParser from "cookie-parser";
 
 import cors from "cors";
 const app = Express();
-app.use(
-  cors({
-    origin:
-      "https://lecture-sheduling-kwdnhnpjr-karishma-yadavs-projects.vercel.app",
-
-    //origin: "http://localhost:5173",
-    credentials: true,
-  })
-);
-
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
@@ -20,6 +10,15 @@ app.use((req, res, next) => {
   );
   next();
 });
+app.use(
+  cors({
+    //origin:
+    //  "https://lecture-sheduling-kwdnhnpjr-karishma-yadavs-projects.vercel.app",
+
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 
 //  "https://lecture-sheduling-gpiyft5c7-karishma-yadavs-projects.vercel.app";
 
