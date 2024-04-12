@@ -1,5 +1,4 @@
-const BASE_URL = "https://lecture-sheduling-backend.onrender.com/api/v1";
-//const BASE_URL = "http://localhost:8000/api/v1";
+const BASE_URL = "/api";
 
 export const USER_APIS = {
   SIGN_UP_API: BASE_URL + "/user/createuser",

@@ -6,19 +6,10 @@ const app = Express();
 app.use(
   cors({
     origin: "https://lecture-sheduling-beta.vercel.app",
+    //origin: "http://localhost:5173",
     credentials: true,
   })
 );
-// app.use((req, res, next) => {
-//   res.setHeader(
-//     "Access-Control-Allow-Origin",
-//     "https://lecture-sheduling-beta.vercel.app"
-//   );
-
-//   res.setHeader("Access-Control-Allow-Credentials", true);
-
-//   next();
-// });
 
 app.use(Express.json());
 app.use(cookieParser());
