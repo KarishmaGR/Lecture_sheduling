@@ -12,10 +12,10 @@ app.use((req, res, next) => {
 });
 app.use(
   cors({
-    //origin:
-    //  "https://lecture-sheduling-kwdnhnpjr-karishma-yadavs-projects.vercel.app",
+    origin:
+      "https://lecture-sheduling-kwdnhnpjr-karishma-yadavs-projects.vercel.app",
 
-    origin: "http://localhost:5173",
+    //origin: "http://localhost:5173",
     credentials: true,
   })
 );
