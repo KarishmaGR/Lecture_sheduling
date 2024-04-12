@@ -16,7 +16,7 @@ app.use(
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://lecture-sheduling-kwdnhnpjr-karishma-yadavs-projects.vercel.app/"
+    "https://lecture-sheduling-kwdnhnpjr-karishma-yadavs-projects.vercel.app"
   );
   next();
 });
